@@ -6,7 +6,7 @@ class Footer {
    public function mostrarFooter() {
         // Imprime el HTML del pie de página
         echo '<div class="footer text-center bg-dark text-white py-2">
-                <p>&copy; 2023 CIFP Pau Casesnoves · Centro de Formación Profesional</p>
+                <p>&copy; 2023 CIFP Pau Casesnoves · Centro de Formación Profesional- JHG</p>
               </div>';
 
         // Imprime los scripts de Bootstrap desde su repositorio remoto y el script personalizado para activar el carrusel
