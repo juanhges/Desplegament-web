@@ -9,7 +9,7 @@ class Eliminar {
     public function eliminar($id) {
         // Verifica si el ID del producto es válido
         if (!isset($id) || !is_numeric($id)) {
-            echo '<p>ID de producto no válido.</p>';
+            echo '<p>ID de producto no válido</p>';
             return;
         }
 
