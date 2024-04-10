@@ -3,9 +3,23 @@
 require_once('Connexio.php');
 require_once('Header.php');
 
+/**
+ * Clase Modificar para actualizar los productos.
+ * 
+ * - Esta clase muestra un formulario de modificación del producto.
+ * - Al pulsar el botón submit te redirige hacia la clase Actualitzar.php
+ * 
+ * @author Github https://github.com/CarlesCanals/Desplegament-web
+ * @date 2024-04-10
+ * @version 1.0
+ */
 class Modificar {
 
-    // Método para mostrar el formulario de modificación del producto
+    /**
+     * Método para mostrar el formulario de modificación del producto
+     * 
+     * @return void
+     */
     public function mostrarFormulari($id) {
         // Verifica si el ID del producto es válido
         if (!isset($id) || !is_numeric($id)) {
@@ -78,7 +92,7 @@ class Modificar {
                             <a href="Principal.php" class="btn btn-secondary">Cancelar</a>
                         </form>
                     </div>';
-            
+
             // Incluye el pie de página
             require_once('Footer.php');
         } else {
@@ -96,5 +110,4 @@ $idProducto = isset($_GET['id']) ? $_GET['id'] : null;
 // Crea una instancia de la clase Modificar y llama al método mostrarFormulari
 $modificarProducto = new Modificar();
 $modificarProducto->mostrarFormulari($idProducto);
-
 ?>

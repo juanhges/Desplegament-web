@@ -3,9 +3,23 @@
 require_once('Connexio.php');
 require_once('Header.php');
 
+/**
+ * Clase Principal: Muestra la lista de productos para poder realizar un CRUD.
+ * 
+ * - Esta clase muestra una lista de los productos.
+ * - Pudiendo dar de alta, modificar y eliminar una producto de la base de datos.
+ * 
+ * @author Github https://github.com/CarlesCanals/Desplegament-web
+ * @date 2024-04-10
+ * @version 1.0
+ */
 class Principal {
-    
-    // Método para mostrar la lista de productos
+
+    /**
+     * Método para mostrar las lista de productos
+     * 
+     * @return void
+     */
     public function mostrarProductes() {
         // Obtiene la conexión a la base de datos
         $conexionObj = new Connexio();
@@ -81,5 +95,4 @@ class Principal {
 // Crea una instancia de la clase Principal y llama al método mostrarProductes
 $listaProductos = new Principal();
 $listaProductos->mostrarProductes();
-
 ?>

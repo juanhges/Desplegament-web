@@ -1,11 +1,25 @@
 <?php
 
-// Incluye el archivo de conexión
 require_once('Connexio.php');
 
+/**
+ * Clase Eliminar: script para eliminar un producto en la base de datos.
+ * 
+ * - Elimina el producto en la base de datos en función del id del producto
+ * 
+ * @author JHG
+ * @date 2024-04-10
+ * @version 1.0
+ */
 class Eliminar {
 
-    // Método para eliminar un producto de la base de datos
+    /**
+     * Método para eliminar un producto en la base de datos.
+     * 
+     * @param String $id Identificador del producto a eliminar. 
+     * 
+     * @retun void
+     */
     public function eliminar($id) {
         // Verifica si el ID del producto es válido
         if (!isset($id) || !is_numeric($id)) {
