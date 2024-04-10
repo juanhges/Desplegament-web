@@ -1,11 +1,30 @@
 <?php
 
-// Incluye el archivo de conexión
 require_once('Connexio.php');
 
+/**
+ * Clase Actualitzar: script para actualizar un producto en la base de datos.
+ * 
+ * - Esta clase obtiene los valores del formulario.
+ * - Actualiza el producto en la base de datos
+ * 
+ * @author Github https://github.com/CarlesCanals/Desplegament-web
+ * @date 2024-04-10
+ * @version 1.0
+ */
 class Actualitzar {
-    
-    // Método para actualizar un producto en la base de datos
+
+    /**
+     * Método para actualizar un producto en la base de datos.
+     * 
+     * @param String $id Identificador del producto. 
+     * @param String $nom Nombre del producto. 
+     * @param String $descripcio Descripción del producto. 
+     * @param String $preu Precio del producto. 
+     * @param String $categoria Identificador de la categoría del producto. 
+     * 
+     * @retun void
+     */
     public function actualizar($id, $nom, $descripcio, $preu, $categoria) {
         // Verifica si todos los campos requeridos están presentes
         if (!isset($id) || !isset($nom) || !isset($descripcio) || !isset($preu) || !isset($categoria)) {
@@ -54,5 +73,4 @@ $categoria = isset($_POST['categoria']) ? $_POST['categoria'] : null;
 // Crea una instancia de la clase Actualitzar y llama al método actualizar
 $actualizarProducto = new Actualitzar();
 $actualizarProducto->actualizar($id, $nom, $descripcio, $preu, $categoria);
-
 ?>

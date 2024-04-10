@@ -3,9 +3,23 @@
 require_once('Connexio.php');
 require_once('Header.php');
 
+/**
+ * Clase Nou para la creación de nuevos productos.
+ * 
+ * - Esta clase muestra un formulario de alta del producto.
+ * - Al pulsar el botón submit te redirige hacia la clase Afegir.php
+ * 
+ * @author JHG
+ * @date 2024-04-10
+ * @version 1.0
+ */
 class Nou {
 
-    // Método para mostrar el formulario de modificación del producto
+    /**
+     * Método para mostrar el formulario de alta del producto
+     * 
+     * @return void
+     */
     public function mostrarFormulari() {
 
         echo '<!DOCTYPE html>
@@ -61,12 +75,9 @@ class Nou {
                             <a href="Principal.php" class="btn btn-secondary">Cancelar</a>
                         </form>
                     </div>';
-
-        // Incluye el pie de página
         require_once('Footer.php');
     }
 }
-
 
 // Crea una instancia de la clase Nou y llama al método mostrarFormulari
 $nouProducto = new Nou();
